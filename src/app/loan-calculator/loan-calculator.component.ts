@@ -22,4 +22,8 @@ export class LoanCalculatorComponent implements OnInit {
     this.loanCalculatorForm = this.formService.buildLoanCalculatorForm();
     this.formControls = this.formService.getFormControls(this.loanCalculatorForm);
   }
+
+  onCalculate(): void {
+    
+  }
 }

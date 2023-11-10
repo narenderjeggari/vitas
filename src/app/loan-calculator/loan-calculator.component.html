@@ -1,0 +1,33 @@
+<div class="w-full p-8">
+  <div class="text-xl main-color font-medium mb-4">Loan calculator</div>
+    <form [formGroup]="loanCalculatorForm">
+        <mat-form-field class="w-full">
+            <mat-label>Loan Type</mat-label>
+            <mat-select [formControl]="formControls.loanType">
+              <mat-option>Select Loan</mat-option>
+              @for (loanType of loanTypes; track loanType) {
+                <mat-option [value]="loanType.type">{{loanType.label}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="w-full">
+            <mat-label>Loan Amount</mat-label>
+            <input type="number" matInput [formControl]="formControls.loanAmount"/>
+          </mat-form-field>
+          <mat-form-field class="w-full">
+            <mat-label>Loan Term(Month)</mat-label>
+            <input type="number" matInput [formControl]="formControls.loanAmount"/>
+          </mat-form-field>
+    </form>
+    <div class="loan-calculator-calculation">
+      <div class="loan-calculator-calculation-item">
+        <label>Calculated at:</label>
+      </div>
+      <div class="loan-calculator-calculation-item">
+        <label>Monthly:</label>
+      </div>
+    </div>
+    <div>
+      <button mat-flat-button color="primary" (click)="onCalculate()">Calculate now</button>
+    </div>
+  </div>

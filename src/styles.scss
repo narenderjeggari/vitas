@@ -3,5 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
+$main-color: #C2CD23;
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.loan-calculator-calculation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    width: 80%;
+    &-item {
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        label {
+            color: $main-color;
+            font-size: 16px;
+        }
+    }
+    
+}
+
+.main-color {
+    color: $main-color;
+}
